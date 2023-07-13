@@ -17,11 +17,11 @@ __________
 ### File git statuses
 
 ```mermaid
-graph TD;
--- "file created" --> untracked;  
-untracked -- "git add" --> staged+tracked;
-  staged+tracked    -- "git commit" --> committed+tracked;
-stage -- "changed --> modified+tracked;
-modified+tracked -- "git add" --> staged+tracked;
-committed+tracked -- "changed" --> modified+tracked;
+flowchart TD
+-- file created --> A [untracked];
+A -- git add --> B [staged+tracked];
+B -- git commit --> C [committed+tracked];
+B -- changed --> D [modified+tracked];
+D -- git add --> B;
+C -- changed --> D;
 ``` 
