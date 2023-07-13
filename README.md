@@ -17,6 +17,7 @@ __________
 ### File git statuses
 
 ```mermaid
+graph TD;
 -- "file created" --> untracked;  
 untracked -- "git add" --> staged+tracked;
   staged+tracked    -- "git commit" --> committed+tracked;
